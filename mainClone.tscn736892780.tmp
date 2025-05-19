@@ -23,4 +23,4 @@ navigation_polygon = SubResource("NavigationPolygon_0vd1g")
 [node name="Player" parent="." instance=ExtResource("3_cfc77")]
 position = Vector2(679, 410)
 
-[node name="MeleeEnemy" parent="." instance=ExtResource("3_tp0sa")]
+[node name="BaseEnemy" parent="." instance=ExtResource("3_tp0sa")]

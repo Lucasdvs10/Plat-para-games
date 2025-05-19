@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @export var max_health: int = 100
 var current_health: int = max_health
+var isInvincible: bool
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
@@ -18,10 +19,23 @@ func _process(delta):
 		$HealthBar.value = current_health
 
 func take_damage(amount: int):
+	if(isInvincible):
+		return
+		
 	current_health -= amount
 	current_health = max(current_health, 0)
+	print("Tomei dano")
 	if current_health <= 0:
 		die()
+	isInvincible = true
+	
+	for i in range(4):
+		$Sprite2D.visible = false
+		await get_tree().create_timer(0.25).timeout
+		$Sprite2D.visible = true
+		await get_tree().create_timer(0.25).timeout
+		
+	isInvincible = false	
 
 func die():
 	queue_free()

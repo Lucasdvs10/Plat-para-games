@@ -5,8 +5,10 @@ extends CharacterBody2D
 @export var stopDistance: float = 4
 var stopDistanceSquared: float
 var targetPosition: Vector2
-
 var player: Node2D
+
+@export var max_health: int = 100
+var current_health: int = max_health
 
 func _ready():
 	stopDistanceSquared = stopDistance * stopDistance
@@ -32,3 +34,15 @@ func _physics_process(delta: float) -> void:
 
 func updateTarget(targetPos: Vector2) -> void:
 	agent.set_target_position(targetPos)
+	
+	
+
+func take_damage(amount: int):
+	current_health -= amount
+	current_health = max(current_health, 0)
+	print("Tomei dano")
+	if current_health <= 0:
+		die()
+
+func die():
+	queue_free()

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dytgw233nggqm"]
+
+[ext_resource type="PackedScene" uid="uid://revvgfrkfqfk" path="res://Enemies/BaseEnemy.tscn" id="1_cqh8a"]
+[ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="2_u7gh4"]
+
+[node name="MeleeEnemy" instance=ExtResource("1_cqh8a")]
+stopDistance = 50.0
+
+[node name="MeleeAtack" type="Node2D" parent="." index="3"]
+script = ExtResource("2_u7gh4")
