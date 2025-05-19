@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://25by1fe6yskx"]
 
-[ext_resource type="Script" uid="uid://coxba48g5hhtx" path="res://player.gd" id="1_kpjcp"]
+[ext_resource type="Script" uid="uid://coxba48g5hhtx" path="res://Player/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bhhunakgxscnr" path="res://demonios.png" id="2_kne1u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
