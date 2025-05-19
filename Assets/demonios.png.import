@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhhunakgxscnr"
-path="res://.godot/imported/demonios.png-9a701b86d1d12a1a4ad6acac2f313f61.ctex"
+path="res://.godot/imported/demonios.png-c671bc33b56fec504dc7a716d34ed49d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://demonios.png"
-dest_files=["res://.godot/imported/demonios.png-9a701b86d1d12a1a4ad6acac2f313f61.ctex"]
+source_file="res://Assets/demonios.png"
+dest_files=["res://.godot/imported/demonios.png-c671bc33b56fec504dc7a716d34ed49d.ctex"]
 
 [params]
 

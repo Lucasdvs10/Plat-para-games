@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://clmg8e5eebx34"]
+
+[ext_resource type="Texture2D" uid="uid://c2vievbsjiwwm" path="res://Assets/GreenSquare.jpg" id="1_0htpu"]
+[ext_resource type="PackedScene" uid="uid://revvgfrkfqfk" path="res://Enemies/BaseEnemy.tscn" id="2_0vd1g"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_0vd1g"]
+vertices = PackedVector2Array(550.227, 304.828, -560.344, 308.641, -557.859, -308.688, 556.438, -309.953)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-567.829, -318.678, -570.392, 318.678, 560.138, 314.807, 566.547, -319.968)])
+
+[node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(446, 249)
+scale = Vector2(0.780165, 0.775077)
+texture = ExtResource("1_0htpu")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Sprite2D"]
+position = Vector2(-14.0996, -3.87058)
+navigation_polygon = SubResource("NavigationPolygon_0vd1g")
+
+[node name="BaseEnemy" parent="Sprite2D" instance=ExtResource("2_0vd1g")]
+position = Vector2(216.621, -130.31)
