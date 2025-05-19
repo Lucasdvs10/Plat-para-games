@@ -6,11 +6,18 @@ extends CharacterBody2D
 var stopDistanceSquared: float
 var targetPosition: Vector2
 
+var player: Node2D
+
 func _ready():
 	stopDistanceSquared = stopDistance * stopDistance
+	player = get_parent().get_node("Player")
 
 func _physics_process(delta: float) -> void:
-	targetPosition = get_parent().get_node("Player").global_position
+	if(player == null):
+		printerr("Player não encontrado na árvore de Nodes")
+		return
+		
+	targetPosition = player.global_position
 	updateTarget(targetPosition)
 	
 	if(global_position.distance_squared_to(targetPosition) > stopDistanceSquared):
@@ -20,6 +27,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	else:
 		velocity = Vector2.ZERO
+
+		
 
 func updateTarget(targetPos: Vector2) -> void:
 	agent.set_target_position(targetPos)
