@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://25by1fe6yskx"]
+
+[ext_resource type="Script" uid="uid://coxba48g5hhtx" path="res://Player/player.gd" id="1_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://bhhunakgxscnr" path="res://Assets/demonios.png" id="2_kne1u"]
+[ext_resource type="PackedScene" uid="uid://6twcyxymeb3m" path="res://bullet.tscn" id="3_tok1r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
+radius = 7.0
+height = 22.0
+
+[node name="Player" type="CharacterBody2D"]
+collision_mask = 13
+script = ExtResource("1_kpjcp")
+bullet_scene = ExtResource("3_tok1r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kne1u")
+region_enabled = true
+region_rect = Rect2(0, 0, 16.8158, 17.1842)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_kpjcp")
+
+[node name="HealthBar" type="TextureProgressBar" parent="."]
+offset_left = -14.0
+offset_top = -17.0
+offset_right = 14.0
+offset_bottom = -12.0
+value = 100.0
+tint_under = Color(0.986878, 0.986234, 0.990004, 1)
+tint_progress = Color(0.999618, 0.294936, 0.283641, 1)
+
+[node name="Bullet" parent="." instance=ExtResource("3_tok1r")]
+position = Vector2(-16, 0)
+rotation = 3.14159

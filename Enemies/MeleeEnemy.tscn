@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cjeuyw3gjn25f"]
+
+[node name="MeleeEnemy" type="Node2D"]
