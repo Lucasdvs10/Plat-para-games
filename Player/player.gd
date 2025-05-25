@@ -29,9 +29,14 @@ func take_damage(amount: int):
 
 	current_health -= amount
 	current_health = max(current_health, 0)
+<<<<<<< HEAD
+	print("Tomei dano, vida atual:", current_health)
+=======
+>>>>>>> 2f0bf5bb5c869a5505f7683f4f71a73daefe97a0
 
 	if current_health <= 0:
 		die()
+		return
 
 	isInvincible = true
 	await piscar()
@@ -45,8 +50,10 @@ func piscar():
 		await get_tree().create_timer(0.1).timeout
 
 func die():
+	var main_node = get_tree().current_scene
+	if main_node and main_node.has_method("on_player_died"):
+		main_node.on_player_died()
 	queue_free()
-	print("Morri")
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
