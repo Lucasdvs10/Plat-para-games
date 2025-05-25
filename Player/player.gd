@@ -66,7 +66,5 @@ func shoot_bullet():
 		bullet.direction = dir
 		bullet.rotation = dir.angle()
 		
-		bullet.owner = self
-		
 		get_parent().add_child(bullet)
 		
