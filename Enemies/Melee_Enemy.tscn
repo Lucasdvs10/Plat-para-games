@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="2_u7gh4"]
 
 [node name="MeleeEnemy" instance=ExtResource("1_cqh8a")]
+collision_layer = 4
+collision_mask = 3
 stopDistance = 50.0
 
 [node name="MeleeAtack" type="Node2D" parent="." index="3"]

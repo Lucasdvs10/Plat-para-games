@@ -29,7 +29,10 @@ func take_damage(amount: int):
 
 	current_health -= amount
 	current_health = max(current_health, 0)
+<<<<<<< HEAD
 	print("Tomei dano, vida atual:", current_health)
+=======
+>>>>>>> 2f0bf5bb5c869a5505f7683f4f71a73daefe97a0
 
 	if current_health <= 0:
 		die()
