@@ -21,5 +21,6 @@ position = Vector2(-14.0996, -3.87058)
 navigation_polygon = SubResource("NavigationPolygon_0vd1g")
 
 [node name="Player" parent="." instance=ExtResource("3_cfc77")]
+position = Vector2(679, 410)
 
 [node name="RangedEnemy" parent="." instance=ExtResource("2_cfc77")]
