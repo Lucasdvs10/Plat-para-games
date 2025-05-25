@@ -29,7 +29,6 @@ func take_damage(amount: int):
 
 	current_health -= amount
 	current_health = max(current_health, 0)
-	print("Tomei dano")
 
 	if current_health <= 0:
 		die()
@@ -71,4 +70,3 @@ func shoot_bullet():
 		
 		get_parent().add_child(bullet)
 		
-		print("Disparo da posição:", shoot_origin, "em direção a:", dir)
