@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxc4m836ur3vr"]
+[gd_scene load_steps=4 format=3 uid="uid://cyun3mylblgfq"]
 
 [ext_resource type="PackedScene" uid="uid://revvgfrkfqfk" path="res://Enemies/BaseEnemy.tscn" id="1_qknb6"]
-[ext_resource type="Script" uid="uid://ckxjlike3ehso" path="res://Enemies/ranged_attack.gd" id="2_df2bw"]
-[ext_resource type="PackedScene" uid="uid://umac62oph5n6" path="res://enemyBullet.tscn" id="3_jsdsh"]
+[ext_resource type="Script" path="res://Enemies/ranged_attack.gd" id="2_df2bw"]
+[ext_resource type="PackedScene" uid="uid://dk2fls1blemct" path="res://enemyBullet.tscn" id="3_jsdsh"]
 
 [node name="RangedEnemy" instance=ExtResource("1_qknb6")]
 stopDistance = 400.0

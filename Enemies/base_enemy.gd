@@ -45,4 +45,5 @@ func take_damage(amount: int):
 		die()
 
 func die():
+	#player.enemy_spawner
 	queue_free()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://clmg8e5eebx34"]
 
 [ext_resource type="Texture2D" uid="uid://c2vievbsjiwwm" path="res://Assets/GreenSquare.jpg" id="1_0htpu"]
-[ext_resource type="PackedScene" uid="uid://cxc4m836ur3vr" path="res://Enemies/Ranged_enemy.tscn" id="2_cfc77"]
+[ext_resource type="PackedScene" uid="uid://cyun3mylblgfq" path="res://Enemies/Ranged_enemy.tscn" id="2_cfc77"]
 [ext_resource type="PackedScene" uid="uid://25by1fe6yskx" path="res://Player/Player.tscn" id="3_cfc77"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_0vd1g"]
@@ -20,6 +20,6 @@ texture = ExtResource("1_0htpu")
 position = Vector2(-14.0996, -3.87058)
 navigation_polygon = SubResource("NavigationPolygon_0vd1g")
 
-[node name="Player" parent="." instance=ExtResource("3_cfc77")]
-
 [node name="RangedEnemy" parent="." instance=ExtResource("2_cfc77")]
+
+[node name="Player" parent="." instance=ExtResource("3_cfc77")]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0oxf48628ba4"]
+
+[ext_resource type="PackedScene" uid="uid://revvgfrkfqfk" path="res://Enemies/BaseEnemy.tscn" id="1_c17pv"]
+[ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="2_7fbvx"]
+
+[node name="MeleeEnemy" instance=ExtResource("1_c17pv")]
+SPEED = 500
+stopDistance = 50.0
+max_health = 300
+
+[node name="MeleeAtack" type="Node2D" parent="." index="3"]
+script = ExtResource("2_7fbvx")
+attackDelayInSeconds = 1.5

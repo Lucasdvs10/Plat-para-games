@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://25by1fe6yskx"]
+[gd_scene load_steps=6 format=3 uid="uid://25by1fe6yskx"]
 
 [ext_resource type="Script" uid="uid://coxba48g5hhtx" path="res://Player/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bhhunakgxscnr" path="res://Assets/demonios.png" id="2_kne1u"]
 [ext_resource type="PackedScene" uid="uid://6twcyxymeb3m" path="res://bullet.tscn" id="3_tok1r"]
+[ext_resource type="Script" uid="uid://d30ghni2nkusv" path="res://Player/enemy_spawner.gd" id="4_ddoul"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
 radius = 7.0
@@ -33,3 +34,6 @@ tint_progress = Color(0.999618, 0.294936, 0.283641, 1)
 [node name="Bullet" parent="." instance=ExtResource("3_tok1r")]
 position = Vector2(-16, 0)
 rotation = 3.14159
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("4_ddoul")

@@ -4,6 +4,7 @@ var player
 
 var mainNode: CharacterBody2D
 var isAttacking: bool
+@export var attackDelayInSeconds: float
 
 func _ready():
 	mainNode = get_parent()
@@ -22,7 +23,7 @@ func Attack():
 	isAttacking = true
 	mainNode.SPEED = Vector2.ZERO
 	
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(attackDelayInSeconds).timeout
 	
 	if(global_position.distance_squared_to(player.global_position) <= mainNode.stopDistanceSquared):
 		player.take_damage(10)
