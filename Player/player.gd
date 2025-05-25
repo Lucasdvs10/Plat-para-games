@@ -29,10 +29,11 @@ func take_damage(amount: int):
 
 	current_health -= amount
 	current_health = max(current_health, 0)
-	print("Tomei dano")
+	print("Tomei dano, vida atual:", current_health)
 
 	if current_health <= 0:
 		die()
+		return
 
 	isInvincible = true
 	await piscar()
@@ -46,8 +47,10 @@ func piscar():
 		await get_tree().create_timer(0.1).timeout
 
 func die():
+	var main_node = get_tree().current_scene
+	if main_node and main_node.has_method("on_player_died"):
+		main_node.on_player_died()
 	queue_free()
-	print("Morri")
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -67,8 +70,5 @@ func shoot_bullet():
 		bullet.direction = dir
 		bullet.rotation = dir.angle()
 		
-		bullet.owner = self
-		
 		get_parent().add_child(bullet)
 		
-		print("Disparo da posição:", shoot_origin, "em direção a:", dir)
