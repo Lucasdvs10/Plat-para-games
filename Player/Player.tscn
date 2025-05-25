@@ -1,9 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://25by1fe6yskx"]
+[gd_scene load_steps=10 format=3 uid="uid://25by1fe6yskx"]
 
 [ext_resource type="Script" uid="uid://coxba48g5hhtx" path="res://Player/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://bhhunakgxscnr" path="res://Assets/demonios.png" id="2_kne1u"]
 [ext_resource type="PackedScene" uid="uid://6twcyxymeb3m" path="res://bullet.tscn" id="3_tok1r"]
 [ext_resource type="Script" uid="uid://d30ghni2nkusv" path="res://Player/enemy_spawner.gd" id="4_ddoul"]
+[ext_resource type="PackedScene" uid="uid://dytgw233nggqm" path="res://Enemies/Melee_Enemy.tscn" id="5_s1rgi"]
+[ext_resource type="PackedScene" uid="uid://b0oxf48628ba4" path="res://Enemies/Knife_Enemy.tscn" id="6_j23h2"]
+[ext_resource type="PackedScene" uid="uid://cyun3mylblgfq" path="res://Enemies/Ranged_enemy.tscn" id="7_0j2ni"]
+[ext_resource type="PackedScene" uid="uid://b5mju5ple61vj" path="res://Enemies/Tank_Enemy.tscn" id="8_v0k0e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kpjcp"]
 radius = 7.0
@@ -37,3 +41,7 @@ rotation = 3.14159
 
 [node name="EnemySpawner" type="Node2D" parent="."]
 script = ExtResource("4_ddoul")
+meleeEnemy = ExtResource("5_s1rgi")
+knifeEnemy = ExtResource("6_j23h2")
+rangedEnemy = ExtResource("7_0j2ni")
+tankEnemy = ExtResource("8_v0k0e")
