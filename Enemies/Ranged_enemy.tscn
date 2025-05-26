@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://umac62oph5n6" path="res://enemyBullet.tscn" id="3_jsdsh"]
 
 [node name="RangedEnemy" instance=ExtResource("1_qknb6")]
+collision_mask = 28
 SPEED = 100
 stopDistance = 200.0
 max_health = 250
