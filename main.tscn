@@ -1,18 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwhxmuw6skfib"]
+[gd_scene load_steps=13 format=3 uid="uid://dwhxmuw6skfib"]
 
 [ext_resource type="Script" uid="uid://bl4kjqqat2pgr" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://25by1fe6yskx" path="res://Player/Player.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://633d1sha6sjw" path="res://Assets/mapa.png" id="2_h2yge"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
-vertices = PackedVector2Array(466.883, -387.43, 471.883, 386.102, -470.609, 387.359, -466.859, -392.477)
+vertices = PackedVector2Array(462.992, -389.969, 464.242, 388.688, -471.953, 391.219, -471.953, -391.227)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-476.822, -402.541, -480.668, 397.38, 481.949, 396.09, 476.822, -397.38)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-481.949, -401.25, -481.949, 401.251, 474.259, 398.67, 472.977, -399.96)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(48.5, 36.5273)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(49, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(50, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mycd"]
+size = Vector2(49, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272bh"]
+size = Vector2(49, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vw27"]
+size = Vector2(49, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kek77"]
+size = Vector2(110, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4c57u"]
+size = Vector2(13, 22)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3, -16)
 scale = Vector2(0.780165, 0.775077)
 texture = ExtResource("2_h2yge")
 
@@ -20,6 +45,7 @@ texture = ExtResource("2_h2yge")
 navigation_polygon = SubResource("NavigationPolygon_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(-117, 49)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
@@ -31,6 +57,7 @@ offset_right = 224.0
 offset_bottom = -135.0
 
 [node name="Start Panel" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -97,3 +124,54 @@ offset_top = -158.0
 offset_right = 55.0
 offset_bottom = -135.0
 text = "Você Morreu!!"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-89.5, -11.2031)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="StaticBody2D"]
+carve_navigation_mesh = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-15.5, -15)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(60, -22)
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(-89.5, -110)
+shape = SubResource("RectangleShape2D_7mycd")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2(-14.5, -96.5)
+shape = SubResource("RectangleShape2D_272bh")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2(58.5, -97)
+shape = SubResource("RectangleShape2D_5vw27")
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+position = Vector2(-34, 101)
+shape = SubResource("RectangleShape2D_kek77")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+position = Vector2(141.5, -16)
+shape = SubResource("RectangleShape2D_4c57u")
