@@ -8,11 +8,12 @@ var targetPosition: Vector2
 var player: Node2D
 
 @export var max_health: int = 100
-var current_health: int = max_health
+var current_health: int
 
 func _ready():
 	stopDistanceSquared = stopDistance * stopDistance
 	player = get_parent().get_node("Player")
+	current_health = max_health
 
 func _physics_process(delta: float) -> void:
 	if(player == null):

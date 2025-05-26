@@ -1,10 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwhxmuw6skfib"]
+[gd_scene load_steps=5 format=3 uid="uid://dwhxmuw6skfib"]
 
 [ext_resource type="Script" uid="uid://bl4kjqqat2pgr" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://25by1fe6yskx" path="res://Player/Player.tscn" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://633d1sha6sjw" path="res://Assets/mapa.png" id="2_h2yge"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
+vertices = PackedVector2Array(466.883, -387.43, 471.883, 386.102, -470.609, 387.359, -466.859, -392.477)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-476.822, -402.541, -480.668, 397.38, 481.949, 396.09, 476.822, -397.38)])
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0xm2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.780165, 0.775077)
+texture = ExtResource("2_h2yge")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Sprite2D"]
+navigation_polygon = SubResource("NavigationPolygon_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 

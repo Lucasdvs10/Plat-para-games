@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://nk33qi36muic"]
+
+[ext_resource type="PackedScene" uid="uid://revvgfrkfqfk" path="res://Enemies/BaseEnemy.tscn" id="1_tkcka"]
+[ext_resource type="Texture2D" uid="uid://bhhunakgxscnr" path="res://Assets/demonios.png" id="2_f5eom"]
+[ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="3_dx1nd"]
+
+[node name="TankEnemy" instance=ExtResource("1_tkcka")]
+stopDistance = 50.0
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(1, 0)
+scale = Vector2(1.6129, 1.6129)
+texture = ExtResource("2_f5eom")
+region_enabled = true
+region_rect = Rect2(47.9138, 0.270926, 31.853, 31.6551)
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0.5, 0.5)
+
+[node name="MeleeAtack" type="Node2D" parent="." index="3"]
+script = ExtResource("3_dx1nd")
