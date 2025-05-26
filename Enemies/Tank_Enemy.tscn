@@ -5,7 +5,9 @@
 [ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="3_dx1nd"]
 
 [node name="TankEnemy" instance=ExtResource("1_tkcka")]
-stopDistance = 50.0
+SPEED = 150
+stopDistance = 20.0
+max_health = 400
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(1, 0)

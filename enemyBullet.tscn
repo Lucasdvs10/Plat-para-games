@@ -11,7 +11,11 @@ collision_layer = 8
 script = ExtResource("1_3t1j0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visibility_layer = 1023
+z_index = -100
 texture = ExtResource("2_xgbee")
+region_enabled = true
+region_rect = Rect2(32.1008, 0, 15.5605, 15.4018)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

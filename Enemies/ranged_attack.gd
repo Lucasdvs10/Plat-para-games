@@ -37,7 +37,7 @@ func shoot_bullet():
 		bullet.direction = dir
 		bullet.rotation = dir.angle()
 		
-		get_parent().get_parent().add_child(bullet)
+		get_tree().get_root().get_node("Main").add_child(bullet)
 		
 		await get_tree().create_timer(1).timeout
 		

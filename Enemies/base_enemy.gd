@@ -17,7 +17,6 @@ func _ready():
 
 func _physics_process(delta: float) -> void:
 	if(player == null):
-		printerr("Player não encontrado na árvore de Nodes")
 		return
 		
 	targetPosition = player.global_position
@@ -36,12 +35,18 @@ func _physics_process(delta: float) -> void:
 func updateTarget(targetPos: Vector2) -> void:
 	agent.set_target_position(targetPos)
 	
-	
+func piscar():
+	for i in range(3):
+		$Sprite2D.visible = false
+		await get_tree().create_timer(0.1).timeout
+		$Sprite2D.visible = true
+		await get_tree().create_timer(0.1).timeout
 
 func take_damage(amount: int):
 	current_health -= amount
 	current_health = max(current_health, 0)
-	print("Tomei dano")
+	piscar()
+	
 	if current_health <= 0:
 		die()
 

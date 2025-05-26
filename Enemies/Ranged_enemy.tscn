@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://umac62oph5n6" path="res://enemyBullet.tscn" id="3_jsdsh"]
 
 [node name="RangedEnemy" instance=ExtResource("1_qknb6")]
-stopDistance = 400.0
+SPEED = 100
+stopDistance = 200.0
+max_health = 250
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(-0.533333, 0.499999)
