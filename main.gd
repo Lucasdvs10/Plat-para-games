@@ -52,7 +52,7 @@ func _process(delta):
 func start_game():
 	$"Start Panel".visible = false
 	is_alive = true
-	$EnemySpawner
+	$EnemySpawner.StartSpawnLoop()
 
 func restart_game():
 	get_tree().reload_current_scene()

@@ -51,7 +51,7 @@ texture = ExtResource("2_h2yge")
 navigation_polygon = SubResource("NavigationPolygon_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
-position = Vector2(-16, 44)
+position = Vector2(-117, 49)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(-2.78118, 1)
