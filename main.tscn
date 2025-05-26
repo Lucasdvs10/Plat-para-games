@@ -194,8 +194,3 @@ meleeScene = ExtResource("6_kek77")
 knifeScene = ExtResource("7_4c57u")
 rangedScene = ExtResource("8_efxa6")
 tankScene = ExtResource("9_dg77c")
-
-[node name="MeleeEnemy" parent="." instance=ExtResource("6_kek77")]
-
-[node name="RangedEnemy" parent="." instance=ExtResource("8_efxa6")]
-position = Vector2(-221, -70)
