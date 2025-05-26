@@ -9,7 +9,7 @@ var spawnsAmount: int = 1
 
 func SpawnAnEnemy():
 	var enemyToSpawn
-	var enemiesList = [rangedScene]
+	var enemiesList = [rangedScene, meleeScene, knifeScene]
 	
 	if(spawnsAmount % 8 == 0):
 		enemyToSpawn = tankScene.instantiate()
@@ -27,5 +27,5 @@ func SpawnAnEnemy():
 	
 func StartSpawnLoop():
 	SpawnAnEnemy()
-	await get_tree().create_timer(8).timeout
+	await get_tree().create_timer(3).timeout
 	StartSpawnLoop()
