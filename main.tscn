@@ -53,6 +53,7 @@ navigation_polygon = SubResource("NavigationPolygon_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(4, 43)
+scale = Vector2(0.916293, 1.06868)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2(-2.78118, 1)
