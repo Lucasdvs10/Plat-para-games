@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dakgiwoyduqkm" path="res://icon.svg" id="1_rwavt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqv13"]
-size = Vector2(53, 51)
+size = Vector2(16, 16)
 
 [node name="BaseEnemy" type="CharacterBody2D"]
 collision_layer = 4
@@ -12,11 +12,10 @@ collision_mask = 3
 script = ExtResource("1_nqv13")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.414063, 0.414063)
+scale = Vector2(0.119, 0.119)
 texture = ExtResource("1_rwavt")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_nqv13")

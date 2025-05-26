@@ -1,9 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://dwhxmuw6skfib"]
+[gd_scene load_steps=19 format=3 uid="uid://dwhxmuw6skfib"]
 
 [ext_resource type="Script" uid="uid://bl4kjqqat2pgr" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://25by1fe6yskx" path="res://Player/Player.tscn" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://633d1sha6sjw" path="res://Assets/mapa.png" id="2_h2yge"]
 [ext_resource type="AudioStream" uid="uid://cexed25rhm6p3" path="res://Assets/8-bit-pixel-fight.mp3" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://l7bu05lgvbto" path="res://enemy_spawner.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dytgw233nggqm" path="res://Enemies/Melee_Enemy.tscn" id="6_kek77"]
+[ext_resource type="PackedScene" uid="uid://cbbckw273kexx" path="res://Enemies/Knife_Enemy.tscn" id="7_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cxc4m836ur3vr" path="res://Enemies/Ranged_enemy.tscn" id="8_efxa6"]
+[ext_resource type="PackedScene" uid="uid://nk33qi36muic" path="res://Enemies/Tank_Enemy.tscn" id="9_dg77c"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_1bvp3"]
 vertices = PackedVector2Array(462.992, -389.969, 464.242, 388.688, -471.953, 391.219, -471.953, -391.227)
@@ -181,3 +186,16 @@ offset_left = 184.0
 offset_top = -158.0
 offset_right = 224.0
 offset_bottom = -135.0
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+visible = false
+script = ExtResource("5_lquwl")
+meleeScene = ExtResource("6_kek77")
+knifeScene = ExtResource("7_4c57u")
+rangedScene = ExtResource("8_efxa6")
+tankScene = ExtResource("9_dg77c")
+
+[node name="MeleeEnemy" parent="." instance=ExtResource("6_kek77")]
+
+[node name="RangedEnemy" parent="." instance=ExtResource("8_efxa6")]
+position = Vector2(-221, -70)

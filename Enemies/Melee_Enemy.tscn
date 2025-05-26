@@ -9,7 +9,7 @@ stopDistance = 50.0
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(-0.535712, 0.499997)
-scale = Vector2(3.5, 3.5)
+scale = Vector2(1.094, 1.094)
 texture = ExtResource("2_jg8u6")
 region_enabled = true
 region_rect = Rect2(0, 17.2163, 15.609, 14.7837)
