@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://jfn4nm7eywrk" path="res://Enemies/melee_atack.gd" id="3_sshcn"]
 
 [node name="KnifeEnemy" instance=ExtResource("1_7fbvx")]
-SPEED = 230
+SPEED = 225
 stopDistance = 15.0
-max_health = 80
+max_health = 60
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(-0.535712, 0.499997)

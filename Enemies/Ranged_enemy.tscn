@@ -7,9 +7,9 @@
 
 [node name="RangedEnemy" instance=ExtResource("1_qknb6")]
 collision_mask = 28
-SPEED = 100
+SPEED = 50
 stopDistance = 200.0
-max_health = 250
+max_health = 140
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(-0.533333, 0.499999)
